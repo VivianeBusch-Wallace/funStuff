@@ -1,6 +1,6 @@
+// weekend calculator
 const checkNow = document.querySelector("#checkNow");
 const userName = document.querySelector("#userName");
-// testing with value here
 const date = new Date();
 
 // getting today's weekday
@@ -24,3 +24,5 @@ function weekend(e) {
   }
 }
 checkNow.addEventListener("click", weekend);
+
+// number system calculator
