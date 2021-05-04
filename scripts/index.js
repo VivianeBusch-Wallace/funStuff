@@ -7,7 +7,7 @@ const date = new Date();
 const getDayName = () => {
   return date.toLocaleDateString("en-En", { weekday: "long" });
 };
-// calculation
+// calculation weekdays left until weekend
 function weekend(e) {
   e.preventDefault();
   const result = document.querySelector(".weekend-count");
@@ -26,3 +26,12 @@ function weekend(e) {
 checkNow.addEventListener("click", weekend);
 
 // number system calculator
+const userNumber = document.querySelector("#user-input-number");
+const calculateBtn = document.querySelector("#calculate-num-sys-btn");
+let binaryResult = userNumber.value.toString(2);
+
+function calcBin() {
+  console.log(binaryResult);
+}
+
+calculateBtn.addEventListener("click", calcBin);
