@@ -42,11 +42,11 @@ button {
   font-size: smaller;
 }
 .weekend-count {
-  border: blueviolet 2px solid;
-  width: 90vw;
-  height: 2rem;
+  width: 70vw;
+  height: 1.5rem;
   /* min-height: 1.3rem;
   min-width: 10vw; */
   background-color: blanchedalmond;
   color: black;
+  line-height: normal;
 }
