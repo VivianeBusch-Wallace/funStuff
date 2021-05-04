@@ -14,6 +14,10 @@ body {
   color: white;
 }
 section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   /* font-family: "Itim", cursive; */
   width: 50vw;
   height: 50vh;
@@ -37,6 +41,12 @@ button {
   color: black;
   font-size: smaller;
 }
-.result {
-  border: blanchedalmond 2px solid;
+.weekend-count {
+  border: blueviolet 2px solid;
+  width: 90vw;
+  height: 2rem;
+  /* min-height: 1.3rem;
+  min-width: 10vw; */
+  background-color: blanchedalmond;
+  color: black;
 }
