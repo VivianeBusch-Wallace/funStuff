@@ -26,12 +26,31 @@ function weekend(e) {
 checkNow.addEventListener("click", weekend);
 
 // number system calculator
+
 const userNumber = document.querySelector("#user-input-number");
 const calculateBtn = document.querySelector("#calculate-num-sys-btn");
-let binaryResult = userNumber.value.toString(2);
 
-function calcBin() {
-  console.log(binaryResult);
+function calcBin(e) {
+  e.preventDefault();
+  let result = parseInt(userNumber.value, 10).toString(2);
+  // let binaryResult = userNumber.value;
+
+  console.log(result);
+  //console.log(parseInt(userNumber.value, 10).toString(2));
+  // console.log(typeof binaryResult);
+  // console.log(result);
 }
 
 calculateBtn.addEventListener("click", calcBin);
+
+// const decimalToBinary = (num) => {
+//   let result = "";
+
+//   while (num > 0) {
+//     result += num % 2;
+//     num = Math.floor(num / 2);
+//   }
+
+//   return result.split("").reverse().join("");
+// };
+//128 64 32 16 8 4 2 1
