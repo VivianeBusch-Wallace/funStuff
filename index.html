@@ -17,7 +17,7 @@
     <h1>Check out my creations and try them out</h1>
     <h2>Weekend Calculator</h2>
     <p>
-      How many das are left until the weekend? Find out!
+      How many days are left until the weekend? Find out!
       <br />
       two more Projects for you today :slightly_smiling_face: Project One
       Numbers Exchange Create an app that will convert between number systems,
@@ -46,7 +46,13 @@
           id="user-input-number"
           placeholder="Write your number"
         />
-        <select name="base" id="base-system"></select>
+        <p>calculate into</p>
+        <select name="base" id="base-system">
+          <option value="2">binary</option>
+          <option value="8">octonal</option>
+          <option value="10">decimal</option>
+          <option value="16">hexadecimal</option>
+        </select>
         <button id="calculate-num-sys-btn">Calculate</button>
       </form>
       <div class="conversion-result"></div>
