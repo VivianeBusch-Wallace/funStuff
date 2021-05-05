@@ -40,38 +40,44 @@ const calculateBtn = document.querySelector("#calculate-num-sys-btn");
 // result div
 const conversionResult = document.querySelector(".conversion-result");
 // number system chosen by user to convert from
-let numberSystemFrom = document.querySelectorAll("#base-system-from");
+let numberSystemFrom = document.querySelector("#base-system-from");
 // number system chosen by user to convert into
 let numberSystemInto = document.querySelector("#base-system-into");
 
 function calcBin(e) {
   // prevent form from submitting all
   e.preventDefault();
-  // selected base sytem
-  let selectedOption =
+  // selected base sytem to convert to
+  let selectedOptionInto =
     numberSystemInto.options[numberSystemInto.selectedIndex].text;
-  console.log(userNumber.value);
+  console.log(typeof userNumber.value);
+
+  let convertFromNum = parseInt(
+    userNumber.value,
+    parseInt(numberSystemFrom.value)
+  );
+  console.log(convertFromNum);
   // calculate result
   let result;
 
   switch (numberSystemInto.value) {
     case "2":
-      result = parseInt(userNumber.value).toString(2);
+      result = convertFromNum.toString(2);
       break;
     case "8":
-      result = parseInt(userNumber.value).toString(8);
+      result = convertFromNum.toString(8);
       break;
     case "10":
-      result = parseInt(userNumber.value).toString(10);
+      result = convertFromNum;
       break;
     case "16":
-      result = parseInt(userNumber.value).toString(16);
+      result = convertFromNum.toString(16);
       break;
     // default left out
   }
 
   console.log(result);
-  conversionResult.textContent = `${userNumber.value} in ${selectedOption} is ${result}`;
+  conversionResult.textContent = `${userNumber.value} in ${selectedOptionInto} is ${result}`;
 }
 
 calculateBtn.addEventListener("click", calcBin);
