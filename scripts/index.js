@@ -47,19 +47,19 @@ let numberSystemInto = document.querySelector("#base-system-into");
 function calcBin(e) {
   // prevent form from submitting all
   e.preventDefault();
-  // selected base sytem to convert to
+
+  // selected base sytem to convert into
   let selectedOptionInto =
     numberSystemInto.options[numberSystemInto.selectedIndex].text;
-  console.log(typeof userNumber.value);
 
+  // converting the user input number into a real number and into the system they are converting from
   let convertFromNum = parseInt(
     userNumber.value,
     parseInt(numberSystemFrom.value)
   );
-  console.log(convertFromNum);
+
   // calculate result
   let result;
-
   switch (numberSystemInto.value) {
     case "2":
       result = convertFromNum.toString(2);
@@ -75,8 +75,6 @@ function calcBin(e) {
       break;
     // default left out
   }
-
-  console.log(result);
   conversionResult.textContent = `${userNumber.value} in ${selectedOptionInto} is ${result}`;
 }
 
