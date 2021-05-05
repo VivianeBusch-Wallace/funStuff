@@ -39,14 +39,17 @@
     </section>
     <hr />
     <section class="numeric-system-calc">
-      <h2 class="Convert Your Number Into Another Base System"></h2>
+      <h2 class="numeric-system-calc-title">
+        Convert Your Number Into Another Base System
+      </h2>
       <form>
+        <p>Convert</p>
         <input
           type="text"
           id="user-input-number"
-          placeholder="Write your number"
+          placeholder="Write a number"
         />
-        <p>calculate into</p>
+        <p>into</p>
         <select name="base" id="base-system">
           <option value="2">binary</option>
           <option value="8">octonal</option>
@@ -55,7 +58,7 @@
         </select>
         <button id="calculate-num-sys-btn">Calculate</button>
       </form>
-      <div class="conversion-result"></div>
+      <div class="conversion-result">Result</div>
     </section>
     <!-- Main scripts -->
     <script src="./scripts/index.js"></script>

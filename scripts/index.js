@@ -33,18 +33,23 @@ checkNow.addEventListener("click", weekend);
 
 // number system calculator
 
+//user input without value
 const userNumber = document.querySelector("#user-input-number");
+// calculator button
 const calculateBtn = document.querySelector("#calculate-num-sys-btn");
+// result div
+const conversionResult = document.querySelector(".conversion-result");
+// number system chosen by user
+let numberSystem = document.querySelector("#base-system option");
 
 function calcBin(e) {
+  // prevent form from submitting all
   e.preventDefault();
   let result = parseInt(userNumber.value, 10).toString(2);
   // let binaryResult = userNumber.value;
 
   console.log(result);
-  //console.log(parseInt(userNumber.value, 10).toString(2));
-  // console.log(typeof binaryResult);
-  // console.log(result);
+  conversionResult.textContent = `${userNumber.value} in ${numberSystem.textContent} is ${result}`;
 }
 
 calculateBtn.addEventListener("click", calcBin);
