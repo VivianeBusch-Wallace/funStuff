@@ -45,7 +45,8 @@ let numberSystem = document.querySelectorAll("#base-system option");
 function calcBin(e) {
   // prevent form from submitting all
   e.preventDefault();
-  let result = parseInt(userNumber.value, 10).toString(2);
+  // let result = parseInt(userNumber.value, 10).toString(2);
+  let result = parseInt(userNumber.value).toString(2);
   // let binaryResult = userNumber.value;
 
   console.log(result);
