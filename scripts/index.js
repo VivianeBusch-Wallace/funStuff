@@ -57,24 +57,13 @@ function calcBin(e) {
     userNumber.value,
     parseInt(numberSystemFrom.value)
   );
-
+  console.log(typeof numberSystemInto.value);
   // calculate result
-  let result;
-  switch (numberSystemInto.value) {
-    case "2":
-      result = convertFromNum.toString(2);
-      break;
-    case "8":
-      result = convertFromNum.toString(8);
-      break;
-    case "10":
-      result = convertFromNum;
-      break;
-    case "16":
-      result = convertFromNum.toString(16);
-      break;
-    // default left out
-  }
+  let result =
+    numberSystemFrom.value === 10
+      ? convertFromNum
+      : convertFromNum.toString(Number(numberSystemInto.value));
+
   conversionResult.textContent = `${userNumber.value} in ${selectedOptionInto} is ${result}`;
 }
 
