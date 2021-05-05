@@ -40,7 +40,7 @@ const calculateBtn = document.querySelector("#calculate-num-sys-btn");
 // result div
 const conversionResult = document.querySelector(".conversion-result");
 // number system chosen by user
-let numberSystem = document.querySelector("#base-system option");
+let numberSystem = document.querySelectorAll("#base-system option");
 
 function calcBin(e) {
   // prevent form from submitting all
@@ -49,7 +49,7 @@ function calcBin(e) {
   // let binaryResult = userNumber.value;
 
   console.log(result);
-  conversionResult.textContent = `${userNumber.value} in ${numberSystem.textContent} is ${result}`;
+  conversionResult.textContent = `${userNumber.value} in ${numberSystem.innerHTML} is ${result}`;
 }
 
 calculateBtn.addEventListener("click", calcBin);
