@@ -14,6 +14,12 @@ function weekend(e) {
   let calc = 5 - date.getDay();
 
   if (calc > 0) {
+    console.log(result);
+    console.dir(result);
+    console.error("Hi, this is error.");
+    console.warn("Hi, this is warn.");
+    console.table(result);
+
     result.innerHTML = `Hey ${
       userName.value
     }, today is ${getDayName()}, so it's already the weekend. Just joking! You still got ${calc} days left until the weekend! Almost there!`;
@@ -42,15 +48,3 @@ function calcBin(e) {
 }
 
 calculateBtn.addEventListener("click", calcBin);
-
-// const decimalToBinary = (num) => {
-//   let result = "";
-
-//   while (num > 0) {
-//     result += num % 2;
-//     num = Math.floor(num / 2);
-//   }
-
-//   return result.split("").reverse().join("");
-// };
-//128 64 32 16 8 4 2 1
